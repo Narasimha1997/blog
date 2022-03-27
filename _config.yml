@@ -1,1 +1,29 @@
+
+title: Narasimha Prasanna HN
+description: Software Developer - Python, JavaScript, Go, Rust
+
 theme: jekyll-theme-hacker
+author:
+  name: "SomeHacker"
+  email: "someone@somewebsite.somedomain"
+  url: "https://ashishchaudhary.in/hacker-blog"
+
+baseurl: /blog
+
+plugins:
+  - jekyll-paginate
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 3
+paginate_path: /page/:num/
