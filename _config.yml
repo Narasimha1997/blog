@@ -1,18 +1,14 @@
 
+# title and description of the site (will be used in <title> tag)
 title: Narasimha Prasanna HN
 description: Software Developer - Python, JavaScript, Go, Rust
-
+# use hacker theme
 theme: jekyll-theme-hacker
-author:
-  name: "SomeHacker"
-  email: "someone@somewebsite.somedomain"
-  url: "https://ashishchaudhary.in/hacker-blog"
-
+# this is the base URL (use http://localhost:4000/blog/ to access locally)
 baseurl: /blog
-
 plugins:
+  # use paginator plugin
   - jekyll-paginate
-
 defaults:
   -
     scope:
@@ -20,10 +16,17 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-
 source: .
 destination: ./_site
 permalink: /:title
+# display 3 posts in a page
 paginate: 3
 paginate_path: /page/:num/
+# this will be displayed as the banner of the blog's home page
+banner: "root@prasanna-desktop:~#"
+# your linkedin profile
+linkedin: https://in.linkedin.com/in/narasimha-prasanna-hn-17aa89146
+# your Github profile
+github: https://github.com/Narasimha1997
+# your portfolio
+portfolio: http://prasannahn.ml/
