@@ -20,8 +20,8 @@ I decided to write this post to help others get started easily without writing m
 
 ### 1. Getting Started - Create a GitHub Repository and enable gh-pages:
 This is fairly easy, if you have used GithHub before, most probably this will be like a cake-walk for you.
-1. Check to this [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) to create a new repository.
-2. Check this [tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to enable gh-pages feature for the repository you created.
+1. Follow this [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) to create a new repository.
+2. Follow this [tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to enable gh-pages feature for the repository you created.
 
 In my case, I wanted all the codebase related to my blog to be under `gh-pages` branch and not under `main` or `master`, so I selected `gh-pages` as the source branch. GitHub also provides some pre-configured jekyll themes for you to choose, I selected `hacker` theme, because I am a hacker fanboy - who grew up watching `Matrix` and `Mr.Robot`. 
 
@@ -62,11 +62,13 @@ Once jekyll and other tools are installed, you can set-up your blog. The easiest
 ```sh
 # clone my repo
 git clone git@github.com:Narasimha1997/blog.git
+# change directory to by repo you cloned just now
 cd blog
 # checkout gh-pages branch
 git checkout gh-pages
 # remove all my existing posts
 rm -r _posts/*.md
+# copy all the contents to your repo directory
 cp -r . /path/to/your/repo
 ```
 Now go back to your project directory and edit the `_config.yml` file according to your needs. The current `_config.yml` looks like this:
