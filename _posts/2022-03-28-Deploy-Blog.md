@@ -18,8 +18,8 @@ Jykell is a Ruby package that allows us to write content as plain text (of cours
 
 #### 1. Getting Started - Create a GitHub Repository and enable gh-pages:
 This is fairly easy, if you have used GithHub before, most probably this will be like a cake-walk for you.
-1. Check to this [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) to create a new repository.
-2. Check this [tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to enable gh-pages feature for the repository you created.
+1. Follow this [tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo) to create a new repository.
+2. Follow this [tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to enable gh-pages feature for the repository you created.
 
 In my case, I wanted all the codebase related to my blog to be under `gh-pages` branch and not under `main` or `master`, so I selected `gh-pages` as the source branch. GitHub also provides some pre-configured themes for your site, I selected `hacker` theme, because I am a hacker fanboy - who grew up watching `Matrix` and `Mr.Robot`. 
 
