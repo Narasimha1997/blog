@@ -48,7 +48,7 @@ Sorted sets in Redis are sorted based on a number called `Score` (also called as
 2) "bayer"
 3) "banana"
 ``` 
-But can we have multiple entries with same score? Yes, Redis allows that too, when we insert multiple entries to the sorted set with the same score, they are sorted lexicographically. This ordering is performed at bytes-level so any data type can be sorted lexicographically by comparing their raw bytes representation (using `memcmp()`). For example, let us try inserting `[pickle, pineapple, poet, pi, pin, pot, pen]` to a sorted set called "test2" with same score 0.
+But can we have multiple entries with same score? Yes, Redis allows this as well, when we insert multiple entries to the sorted set with the same score, they are sorted lexicographically. This ordering is performed at bytes-level so any data type can be sorted lexicographically by comparing their raw bytes representation (using `memcmp()`). For example, let us try inserting `[pickle, pineapple, poet, pi, pin, pot, pen]` to a sorted set called "test2" with same score 0.
 ```
 127.0.0.1:6379> ZADD "test2" 0 "pickle"
 (integer) 1
