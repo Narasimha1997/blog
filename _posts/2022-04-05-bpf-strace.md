@@ -48,7 +48,7 @@ This should print a table showing some basic statistics of the system calls made
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0.000606          16        36         2 total
 ```
-As expected, we have have `openat`, `read` and `write` system calls present in the table, but why are there so many other system calls? And also, `openat` is called thrice but we are opening the file only once - Well, these are expected, because C compiler is going to add some wrapper functions and bootstrap code, some of the core libraries are also dynamically opened and loaded, thus we have lot of other system calls which are unknown to us.
+As expected, we have `openat`, `read` and `write` system calls present in the table, but why are there so many other system calls? And also, `openat` is called thrice but we are opening the file only once - Well, these are expected, because C compiler is going to add some wrapper functions and bootstrap code, some of the core libraries are also dynamically opened and loaded, thus we have lot of other system calls which are unknown to us.
 
 ### strace
 `strace` (as we saw in the above section) provides lot of other capabilities as well, for example we can also attach it to a PID and trace all the system calls made by that process (We can use `strace -p <PID>`). We can also configure `strace` to suite many use-cases by using one or more options provided by it, just run `strace -h` to list available options. But we have a problem with `strace` - i.e the overhead of tracing. To understand the problems of `strace` we need to look at `ptrace` - the underlying system call used by `strace`.
@@ -106,7 +106,6 @@ import shlex
 import json
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
 
 SCRIPT = "tracepoint:raw_syscalls:sys_enter { @[comm] = count(); } interval:s:5 { print(@); clear(@); }"
 
