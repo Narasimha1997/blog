@@ -56,5 +56,25 @@ def encode(version_string):
 # test
 print(encode('1.2.3'))
 print(encode('255.255.2'))
-```
 
+# output:
+# 66051
+# 16776962
+```
+Decoder does exactly opposite, here is the snippet for decoder:
+```python
+def decode(version):
+    c1 = (version >> 16) & 0xff
+    c2 = (version >> 8) & 0xff
+    c3 = version & 0xff
+
+    return "{}.{}.{}".format(c1, c2, c3)
+
+print(decode(66051))
+print(decode(16776962))
+
+# output:
+# 1.2.3
+# 255.255.2
+```
+If we want to make space for more versions, we can use 64-bit number instead of 24-bit and use 16 bits per part (and wasting 2-bytes at last). Since encoding and decoding operations are interpreted by the application layer and the smart-contract has nothing to do with it, we can do this operation completely off-chain. Thus we can concisely encode semantic versions for efficient storage and quick comparisions on blockchain.
