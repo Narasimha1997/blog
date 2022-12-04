@@ -1,5 +1,5 @@
 ---
-title: Breaking Iran government's censorship against Signal for good using NGINX proxy
+title: Bypassing government censorship in Iran by deploying a Signal proxy using NGINX 
 published: true
 ---
 
